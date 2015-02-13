@@ -71,6 +71,35 @@ public class ProcessScheduling {
 		ArrayList<Process> shortestJobFirst = sjf.sjf();
 		
 		System.out.println("---------------------------------------------------------------\n\n");
+      		
+		ArrayList<Process> processesForHPFNP = new ArrayList<Process>();
+		//Make a Deep Copy of the Original Processes
+		for(Process p : processes) {
+			processesForHPFNP.add(p.clone());
+		}
 		
+		HighestPiorityFirst h = new HighestPiorityFirst(processesForHPFNP);
+		ArrayList<Process> highestPriorityFirst = h.hpfnp();
+		
+		for(int i = 0; i < highestPriorityFirst.size(); i++) {
+			System.out.print(highestPriorityFirst.get(i).getName() + " ");
+		}
+		
+		System.out.println("---------------------------------------------------------------\n\n");
+	
+      ArrayList<Process> processesForHPFP = new ArrayList<Process>();
+		//Make a Deep Copy of the Original Processes
+		for(Process p : processes) {
+			processesForHPFP.add(p.clone());
+		}
+		
+		HighestPiorityFirst hp = new HighestPiorityFirst(processesForHPFP);
+		ArrayList<Process> highestPriorityFirstp = hp.hpfp();
+		
+		for(int i = 0; i < highestPriorityFirstp.size(); i++) {
+			System.out.print(highestPriorityFirstp.get(i).getName() + " ");
+		}
+		
+		System.out.println("---------------------------------------------------------------\n\n");
 	}
 }
