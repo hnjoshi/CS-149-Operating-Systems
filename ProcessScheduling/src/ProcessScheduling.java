@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Random;
@@ -44,11 +45,32 @@ public class ProcessScheduling {
 		}
 		System.out.println("---------------------------------------------------------------\n\n");
 		
-		FirstJobFirst f = new FirstJobFirst(processes);
+		ArrayList<Process> processesForFCFS = new ArrayList<Process>();
+		//Make a Deep Copy of the Original Processes
+		for(Process p : processes) {
+			processesForFCFS.add(p.clone());
+		}
+		
+		FirstJobFirst f = new FirstJobFirst(processesForFCFS);
 		ArrayList<Process> firstComeFirst = f.fcfs();
 		
 		for(int i = 0; i < firstComeFirst.size(); i++) {
 			System.out.print(firstComeFirst.get(i).getName() + " ");
 		}
+		
+		System.out.println("---------------------------------------------------------------\n\n");
+		
+		ArrayList<Process> processesForSJF = new ArrayList<Process>();
+		//Make a Deep Copy of the Original Processes
+		for(Process p : processes) {
+			processesForSJF.add(p.clone());
+		}
+		
+		ShortestJobFirst sjf = new ShortestJobFirst(processesForSJF);
+		
+		ArrayList<Process> shortestJobFirst = sjf.sjf();
+		
+		System.out.println("---------------------------------------------------------------\n\n");
+		
 	}
 }

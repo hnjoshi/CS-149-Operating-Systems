@@ -3,7 +3,6 @@ import java.util.ArrayList;
 /**
  * This class runs First job First Algorithm.
  * @author Kernal
- *
  */
 public class FirstJobFirst {
 	ArrayList<Process> processes;
@@ -37,7 +36,7 @@ public class FirstJobFirst {
 		}
 		System.out.println("Total processes arrived = "+Total_Processes);
 		System.out.println("Total processes served = "+(counter));
-		System.out.println("Total processes runtime = "+runTime + " THIS WILL be same as runTime b/c we are using float that mistake was there");
+		System.out.println("Total processes runtime = "+runTime);
 		System.out.println("\nTotal runtime = "+runTime);
 		System.out.println("Last Process served was "+ p.getName()+".\n");
 		

@@ -6,7 +6,7 @@
  * @author Kernal
  *
  */
-public class Process {
+public class Process implements Cloneable {
 	private char name;
 	private float arrivalTime;
 	private float runTime;
@@ -48,6 +48,14 @@ public class Process {
 
 	public void setPriority(int priority) {
 		this.priority = priority;
+	}
+	
+	public Process clone() {
+		//Deep copy
+		Process p = new Process(arrivalTime, runTime, priority);
+		p.setName(name);
+		
+		return p;
 	}
 	
 	public String toString() {
