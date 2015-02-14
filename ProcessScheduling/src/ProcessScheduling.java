@@ -43,7 +43,11 @@ public class ProcessScheduling {
 		for(Process p : processes) {
 			System.out.println(p);
 		}
-		System.out.println("---------------------------------------------------------------\n\n");
+		System.out.println("---------------------------------------------------------------");
+		
+		/**
+		//Start of the First come first served.
+		System.out.println("Executing First Come First Served");
 		
 		ArrayList<Process> processesForFCFS = new ArrayList<Process>();
 		//Make a Deep Copy of the Original Processes
@@ -57,8 +61,13 @@ public class ProcessScheduling {
 		for(int i = 0; i < firstComeFirst.size(); i++) {
 			System.out.print(firstComeFirst.get(i).getName() + " ");
 		}
+		System.out.println();
+		//END of the First come first served. 
 		
-		System.out.println("---------------------------------------------------------------\n\n");
+		System.out.println("---------------------------------------------------------------");
+		
+		//Start of the Shortest Job First. 
+		System.out.println("Executing Shortest Job First.");
 		
 		ArrayList<Process> processesForSJF = new ArrayList<Process>();
 		//Make a Deep Copy of the Original Processes
@@ -67,11 +76,32 @@ public class ProcessScheduling {
 		}
 		
 		ShortestJobFirst sjf = new ShortestJobFirst(processesForSJF);
-		
 		ArrayList<Process> shortestJobFirst = sjf.sjf();
 		
-		System.out.println("---------------------------------------------------------------\n\n");
-      		
+		//END of the Shortest Job First. 
+		System.out.println("---------------------------------------------------------------");
+		**/
+		//Start of the Round Robin Calls. 
+		System.out.println("Executing Round Robin");
+		ArrayList<Process> processesForRR = new ArrayList<Process>();
+		//Make a Deep Copy of the Original Processes
+		for(Process p : processes) {
+			processesForRR.add(p.clone());
+		}
+		
+		//Call Round Robin Algorithm. 
+		RoundRobin RR = new RoundRobin(processesForRR);
+		ArrayList<Process> roundRobin = RR.roundRobin();
+		
+		for(Process p : roundRobin) {
+			System.out.print(p.getName() + " ");
+		}
+		System.out.println();
+		//END of the Round Robins. 
+		
+		System.out.println("---------------------------------------------------------------");
+  		//Start of Highest Priority First. 
+		System.out.println("Executing Highest Priority First");
 		ArrayList<Process> processesForHPFNP = new ArrayList<Process>();
 		//Make a Deep Copy of the Original Processes
 		for(Process p : processes) {
@@ -84,10 +114,11 @@ public class ProcessScheduling {
 		for(int i = 0; i < highestPriorityFirst.size(); i++) {
 			System.out.print(highestPriorityFirst.get(i).getName() + " ");
 		}
+		System.out.println();
 		
-		System.out.println("---------------------------------------------------------------\n\n");
-	
-      ArrayList<Process> processesForHPFP = new ArrayList<Process>();
+		System.out.println("---------------------------------------------------------------");
+		
+		ArrayList<Process> processesForHPFP = new ArrayList<Process>();
 		//Make a Deep Copy of the Original Processes
 		for(Process p : processes) {
 			processesForHPFP.add(p.clone());
@@ -99,7 +130,9 @@ public class ProcessScheduling {
 		for(int i = 0; i < highestPriorityFirstp.size(); i++) {
 			System.out.print(highestPriorityFirstp.get(i).getName() + " ");
 		}
+		System.out.println();
 		
-		System.out.println("---------------------------------------------------------------\n\n");
+		//End of Highest Priority First. 
+		System.out.println("---------------------------------------------------------------");
 	}
 }

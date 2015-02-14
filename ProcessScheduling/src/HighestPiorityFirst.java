@@ -1,14 +1,9 @@
 
 import java.util.ArrayList;
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- *
- * @author Jagrut
+ * This class performs the Highest Priority First Algorithm. 
+ * @author Kernal
  */
 public class HighestPiorityFirst 
 {
