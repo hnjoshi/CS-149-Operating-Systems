@@ -9,7 +9,7 @@ public class RoundRobin {
 	}
 	
 	public ArrayList<Process> roundRobin() {
-		ArrayList<Process> result = new ArrayList<>();
+		ArrayList<Process> result = new ArrayList<Process>();
 		int counter = 0, size = processes.size(), index = 0;
 		boolean isEmpty = true;
 		

@@ -1,5 +1,7 @@
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * This class performs the Highest Priority First Algorithm. 
@@ -177,7 +179,7 @@ ArrayList<Process> processes;
          	}
             
             tempCounter++;
-            if(tempCounter >= priority1.size()-1) tempCounter = 0; 
+            if(tempCounter > priority1.size()-1) tempCounter = 0; 
             
          }		
       }
@@ -205,7 +207,7 @@ ArrayList<Process> processes;
          	}
             
             tempCounter++;
-            if(tempCounter >= priority2.size()-1) tempCounter = 0; 
+            if(tempCounter > priority2.size()-1) tempCounter = 0; 
             
          }		
       }
@@ -234,7 +236,7 @@ ArrayList<Process> processes;
          	}
             
             tempCounter++;
-            if(tempCounter >= priority3.size()-1) tempCounter = 0; 
+            if(tempCounter > priority3.size()-1) tempCounter = 0; 
             
          }		
       }
@@ -262,7 +264,7 @@ ArrayList<Process> processes;
          	}
             
             tempCounter++;
-            if(tempCounter >= priority4.size()-1) tempCounter = 0; 
+            if(tempCounter > priority4.size()-1) tempCounter = 0; 
             
          }		
       }
@@ -277,5 +279,22 @@ ArrayList<Process> processes;
       return result;
    }
    
-   
+   public int getTurnaroundTime(ArrayList<Process> p)
+   {
+      int average = 0; 
+    //  ArrayList<Process> pro =  new ArrayList<Process>();    
+      Set <Process> uniqueProcess =  new HashSet<Process>(); 
+      for (Process temp: p)
+         {
+            uniqueProcess.add(temp);
+          /*  if(pro.contains(p))
+            {
+               pro.add(temp);
+            }
+            */ 
+         }
+         System.out.println(uniqueProcess.size());
+         
+      return average; 
+   }
 }

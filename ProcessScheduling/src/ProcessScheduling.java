@@ -131,6 +131,8 @@ public class ProcessScheduling {
 			System.out.print(highestPriorityFirstp.get(i).getName() + " ");
 		}
 		System.out.println();
+      
+      hp.getTurnaroundTime(highestPriorityFirstp);
 		
 		//End of Highest Priority First. 
 		System.out.println("---------------------------------------------------------------");
