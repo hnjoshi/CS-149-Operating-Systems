@@ -156,7 +156,7 @@ ArrayList<Process> processes;
     
 		while(!isFull && counter<priority1.size()) {
          int tempCounter = 0; 
-         while(priority1.size()> 0 && !isFull)
+         while(priority1.size()> 0)
          {
             result.add(priority1.get(tempCounter));
             priority1.get(tempCounter).setRunTime(priority1.get(tempCounter).getRunTime()-1);
@@ -169,7 +169,10 @@ ArrayList<Process> processes;
             }
             
             if(runTime >= 100) {
-               p = priority1.get(tempCounter);
+               for(int i=tempCounter+1; i<priority1.size(); i++)
+               {
+                  priority1.remove(i);
+               }
                isFull = true;
          	}
             
@@ -178,12 +181,10 @@ ArrayList<Process> processes;
             
          }		
       }
-      
-      
-
-      while(!isFull && counter<(counter + priority2.size())) {
+     // System.out.println("!isFull = " + !isFull + "counter = " + counter + "priority sum = " + (priority1.size() + priority2.size()));
+      while(!isFull && counter<(counter+ priority2.size())) { 
          int tempCounter = 0; 
-         while(priority2.size()> 0 && !isFull)
+         while(priority2.size()> 0)
          {
             result.add(priority2.get(tempCounter));
             priority2.get(tempCounter).setRunTime(priority2.get(tempCounter).getRunTime()-1);
@@ -196,7 +197,10 @@ ArrayList<Process> processes;
             }
             
             if(runTime >= 100) {
-               p = priority2.get(tempCounter);
+               for(int i=tempCounter+1; i<priority2.size(); i++)
+               {
+                  priority2.remove(i);
+               }
                isFull = true;
          	}
             
@@ -204,14 +208,12 @@ ArrayList<Process> processes;
             if(tempCounter >= priority2.size()-1) tempCounter = 0; 
             
          }		
-         
       }
       
       
-      
-      while(!isFull && counter<counter + priority3.size()) {
+      while(!isFull && counter<(counter+ priority3.size())) { 
          int tempCounter = 0; 
-         while(priority3.size()> 0 && !isFull)
+         while(priority3.size()> 0)
          {
             result.add(priority3.get(tempCounter));
             priority3.get(tempCounter).setRunTime(priority3.get(tempCounter).getRunTime()-1);
@@ -224,7 +226,10 @@ ArrayList<Process> processes;
             }
             
             if(runTime >= 100) {
-               p = priority3.get(tempCounter);
+               for(int i=tempCounter+1; i<priority3.size(); i++)
+               {
+                  priority3.remove(i);
+               }
                isFull = true;
          	}
             
@@ -234,13 +239,10 @@ ArrayList<Process> processes;
          }		
       }
       
-     
-      
-      while(!isFull && counter<counter + priority4.size()) {
+      while(!isFull && counter<(counter+ priority4.size())) { 
          int tempCounter = 0; 
-         while(priority4.size()> 0 && !isFull)
+         while(priority4.size()> 0)
          {
-            
             result.add(priority4.get(tempCounter));
             priority4.get(tempCounter).setRunTime(priority4.get(tempCounter).getRunTime()-1);
             runTime ++; 
@@ -252,17 +254,19 @@ ArrayList<Process> processes;
             }
             
             if(runTime >= 100) {
-               p = priority4.get(tempCounter);
+               for(int i=tempCounter+1; i<priority4.size(); i++)
+               {
+                  priority4.remove(i);
+               }
                isFull = true;
          	}
             
             tempCounter++;
             if(tempCounter >= priority4.size()-1) tempCounter = 0; 
             
-         }	
+         }		
       }
       
-
       
       System.out.println("Total processes arrived = "+Total_Processes);
 		System.out.println("Total processes served = "+(counter));
