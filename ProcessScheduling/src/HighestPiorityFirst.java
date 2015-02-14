@@ -154,62 +154,34 @@ ArrayList<Process> processes;
 		int Total_Processes = processes.size();
       Process p = null; 
     
-		while(!isFull && counter<priority4.size()) {
+		while(!isFull && counter<priority1.size()) {
          int tempCounter = 0; 
-         while(priority4.size()> 0 && !isFull)
+         while(priority1.size()> 0 && !isFull)
          {
-            result.add(priority4.get(tempCounter));
-            priority4.get(tempCounter).setRunTime(priority4.get(tempCounter).getRunTime()-1);
+            result.add(priority1.get(tempCounter));
+            priority1.get(tempCounter).setRunTime(priority1.get(tempCounter).getRunTime()-1);
             runTime ++; 
             
-            if(priority4.get(tempCounter).getRunTime()<=0)
+            if(priority1.get(tempCounter).getRunTime()<=0)
             {
-               priority4.remove(tempCounter);
+               priority1.remove(tempCounter);
                counter++;
             }
             
             if(runTime >= 100) {
-               p = priority4.get(tempCounter);
+               p = priority1.get(tempCounter);
                isFull = true;
          	}
             
             tempCounter++;
-            if(tempCounter >= priority4.size()-1) tempCounter = 0; 
+            if(tempCounter >= priority1.size()-1) tempCounter = 0; 
             
          }		
       }
       
       
 
-      while(!isFull && counter<(counter + priority3.size())) {
-         int tempCounter = 0; 
-         while(priority3.size()> 0 && !isFull)
-         {
-            result.add(priority3.get(tempCounter));
-            priority3.get(tempCounter).setRunTime(priority3.get(tempCounter).getRunTime()-1);
-            runTime ++; 
-            
-            if(priority3.get(tempCounter).getRunTime()<=0)
-            {
-               priority3.remove(tempCounter);
-               counter++;
-            }
-            
-            if(runTime >= 100) {
-               p = priority3.get(tempCounter);
-               isFull = true;
-         	}
-            
-            tempCounter++;
-            if(tempCounter >= priority3.size()-1) tempCounter = 0; 
-            
-         }		
-         
-      }
-      
-      
-      
-      while(!isFull && counter<counter + priority2.size()) {
+      while(!isFull && counter<(counter + priority2.size())) {
          int tempCounter = 0; 
          while(priority2.size()> 0 && !isFull)
          {
@@ -232,32 +204,60 @@ ArrayList<Process> processes;
             if(tempCounter >= priority2.size()-1) tempCounter = 0; 
             
          }		
+         
       }
       
-     
       
-      while(!isFull && counter<counter + priority1.size()) {
+      
+      while(!isFull && counter<counter + priority3.size()) {
          int tempCounter = 0; 
-         while(priority1.size()> 0 && !isFull)
+         while(priority3.size()> 0 && !isFull)
          {
-            
-            result.add(priority1.get(tempCounter));
-            priority1.get(tempCounter).setRunTime(priority1.get(tempCounter).getRunTime()-1);
+            result.add(priority3.get(tempCounter));
+            priority3.get(tempCounter).setRunTime(priority3.get(tempCounter).getRunTime()-1);
             runTime ++; 
             
-            if(priority1.get(tempCounter).getRunTime()<=0)
+            if(priority3.get(tempCounter).getRunTime()<=0)
             {
-               priority1.remove(tempCounter);
+               priority3.remove(tempCounter);
                counter++;
             }
             
             if(runTime >= 100) {
-               p = priority1.get(tempCounter);
+               p = priority3.get(tempCounter);
                isFull = true;
          	}
             
             tempCounter++;
-            if(tempCounter >= priority1.size()-1) tempCounter = 0; 
+            if(tempCounter >= priority3.size()-1) tempCounter = 0; 
+            
+         }		
+      }
+      
+     
+      
+      while(!isFull && counter<counter + priority4.size()) {
+         int tempCounter = 0; 
+         while(priority4.size()> 0 && !isFull)
+         {
+            
+            result.add(priority4.get(tempCounter));
+            priority4.get(tempCounter).setRunTime(priority4.get(tempCounter).getRunTime()-1);
+            runTime ++; 
+            
+            if(priority4.get(tempCounter).getRunTime()<=0)
+            {
+               priority4.remove(tempCounter);
+               counter++;
+            }
+            
+            if(runTime >= 100) {
+               p = priority4.get(tempCounter);
+               isFull = true;
+         	}
+            
+            tempCounter++;
+            if(tempCounter >= priority4.size()-1) tempCounter = 0; 
             
          }	
       }
