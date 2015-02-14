@@ -45,9 +45,9 @@ ArrayList<Process> processes;
 		int Total_Processes = processes.size();
 		Process p = null;
       		
-		while(!isFull && counter<priority4.size()) {
+		while(!isFull && counter<priority1.size()) {
 			
-         p = priority4.get(counter);
+         p = priority1.get(counter);
          
          while(p.getRunTime() > 0)
          {
@@ -62,9 +62,9 @@ ArrayList<Process> processes;
 			}
 		}
       
-      while(!isFull && counter < priority4.size() + priority3.size()) {
+      while(!isFull && counter < priority1.size() + priority2.size()) {
 			
-         p = priority3.get(counter-priority4.size());
+         p = priority2.get(counter-priority1.size());
          
          while(p.getRunTime() > 0)
          {
@@ -79,9 +79,9 @@ ArrayList<Process> processes;
 			}
 		}
       
-      while(!isFull && counter < priority4.size() + priority3.size() + priority2.size()) {
+      while(!isFull && counter < priority1.size() + priority2.size() + priority3.size()) {
 			
-         p = priority2.get(counter-priority4.size()-priority3.size());
+         p = priority3.get(counter-priority1.size()-priority2.size());
          
          while(p.getRunTime() > 0)
          {
@@ -96,9 +96,9 @@ ArrayList<Process> processes;
 			}
 		}
       
-      while(!isFull && counter < priority4.size() + priority3.size() + priority2.size() + priority1.size()) {
+      while(!isFull && counter < priority1.size() + priority2.size() + priority3.size() + priority4.size()) {
 			
-         p = priority1.get(counter-priority4.size()-priority3.size()-priority2.size());
+         p = priority4.get(counter-priority1.size()-priority2.size()-priority3.size());
          
          while(p.getRunTime() > 0)
          {
