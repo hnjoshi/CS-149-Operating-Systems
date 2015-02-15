@@ -27,7 +27,14 @@ public class ProcessScheduling {
 		
 		Collections.sort(processes, new Comparator<Process>() {
 		    public int compare(Process p1, Process p2) {
-		    	return  (int) (p1.getArrivalTime() - p2.getArrivalTime());
+		    	float diff = p1.getArrivalTime() - p2.getArrivalTime();
+		    	if(diff < 0) {
+		    		return -1;
+		    	} else if (diff == 0) {
+		    		return 0;
+		    	} else {
+		    		return 1;
+		    	}
 		    }
 		});
 		
@@ -45,7 +52,7 @@ public class ProcessScheduling {
 		}
 		System.out.println("---------------------------------------------------------------");
 		
-		/**
+		
 		//Start of the First come first served.
 		System.out.println("Executing First Come First Served");
 		
@@ -78,9 +85,14 @@ public class ProcessScheduling {
 		ShortestJobFirst sjf = new ShortestJobFirst(processesForSJF);
 		ArrayList<Process> shortestJobFirst = sjf.sjf();
 		
+		for(Process p : shortestJobFirst) {
+			System.out.print(p.getName() + " ");
+		}
+		System.out.println();
+		
 		//END of the Shortest Job First. 
 		System.out.println("---------------------------------------------------------------");
-		**/
+		
 		//Start of the Round Robin Calls. 
 		System.out.println("Executing Round Robin");
 		ArrayList<Process> processesForRR = new ArrayList<Process>();
