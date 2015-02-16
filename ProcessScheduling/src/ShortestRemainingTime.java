@@ -253,5 +253,19 @@ public class ShortestRemainingTime {
 		double average = sum / distinct;
 		return average;
 	} 
+	
+	public double getThroughPut(ArrayList<Process> result) {
+		double avg = 0;
+		HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+		
+		for(int i = 0; i < result.size(); i++) {
+			if(map.get(result.get(i).getName()) != null) {
+			} else {
+				map.put(result.get(i).getName(), i);
+			}
+		}
+		avg = (map.size() + 0.0) / result.size();
+		return avg;
+	}
 
 }
