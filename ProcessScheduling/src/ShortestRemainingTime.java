@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map.Entry;
 
 
 public class ShortestRemainingTime {
@@ -172,4 +174,84 @@ public class ShortestRemainingTime {
 		}
 		return result;
 	}
+	
+	public double averageTurnAroundTime(ArrayList<Process> result) {
+		HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+		for(int i = 0; i < result.size(); i++) {
+			map.put(result.get(i).getName(), i);
+		}
+		
+		int distinct = map.size();
+		double sum = 0;
+		for (Entry<Character, Integer> entry : map.entrySet())
+		{
+			int index = firstIndex(result, entry.getKey());
+			sum += ((entry.getValue() + 1) - index);
+		}
+		double average = sum / distinct;
+		return average;
+	}
+	
+	public double averageWaitTime(ArrayList<Process> result) {
+		HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+		
+		for(int i = 0; i < result.size(); i++) {
+			if(map.get(result.get(i).getName()) != null) {
+				map.put(result.get(i).getName(), map.get(result.get(i).getName()) + 1);
+			} else {
+				map.put(result.get(i).getName(), 1);
+			}
+		}
+		
+		double sum = 0;
+		
+		for (Entry<Character, Integer> entry : map.entrySet())
+		{
+			int count = entry.getValue();
+			int lastIndex = lastIndex(result, entry.getKey()) + 1;
+			sum += lastIndex - count;
+		}
+		int distinct = map.size();
+		double average = sum / distinct;
+		return average;
+	}
+	
+	private int lastIndex(ArrayList<Process> result, char c) {
+		for(int i = result.size() - 1; i >= 0; i--) {
+			if(result.get(i).getName() == c) {
+				return i;
+			}
+		}
+		return 0;
+	}
+	
+	private int firstIndex(ArrayList<Process> result, char c) {
+		for(int i = 0; i < result.size(); i++) {
+			if(result.get(i).getName() == c) {
+				return i;
+			}
+		}
+		return 0;
+	}
+	public double averageResponseTime(ArrayList<Process> result) {
+		HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+		
+		for(int i = 0; i < result.size(); i++) {
+			if(map.get(result.get(i).getName()) != null) {
+			} else {
+				map.put(result.get(i).getName(), i);
+			}
+		}
+		
+		double sum = 0;
+		
+		for (Entry<Character, Integer> entry : map.entrySet())
+		{
+			sum += entry.getValue();
+		}
+		int distinct = map.size();
+		double average = sum / distinct;
+		return average;
+	} 
+
 }

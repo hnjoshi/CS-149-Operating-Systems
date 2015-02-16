@@ -10,7 +10,7 @@ public class ProcessScheduling {
 		int qCounter = 0;
 		ArrayList<Process> processes = new ArrayList<Process>();
 		
-		while(qCounter < 100) {
+		while(qCounter < 100) { 
 			Random rn = new Random();
 			float aTime = rn.nextFloat() * (99 - 0) + 0;
 
@@ -27,7 +27,14 @@ public class ProcessScheduling {
 		
 		Collections.sort(processes, new Comparator<Process>() {
 		    public int compare(Process p1, Process p2) {
-		    	return  (int) (p1.getArrivalTime() - p2.getArrivalTime());
+		    	float diff = p1.getArrivalTime() - p2.getArrivalTime();
+		    	if(diff < 0) {
+		    		return -1;
+		    	} else if (diff == 0) {
+		    		return 0;
+		    	} else {
+		    		return 1;
+		    	}
 		    }
 		});
 		
@@ -45,7 +52,7 @@ public class ProcessScheduling {
 		}
 		System.out.println("---------------------------------------------------------------");
 		
-		/**
+		
 		//Start of the First come first served.
 		System.out.println("Executing First Come First Served");
 		
@@ -78,35 +85,41 @@ public class ProcessScheduling {
 		ShortestJobFirst sjf = new ShortestJobFirst(processesForSJF);
 		ArrayList<Process> shortestJobFirst = sjf.sjf();
 		
+		for(Process p : shortestJobFirst) {
+			System.out.print(p.getName() + " ");
+		}
+		System.out.println();
+		
 		//END of the Shortest Job First. 
 		System.out.println("---------------------------------------------------------------");
-		**/
-		
 		
 		// Start of Shortest Remaining Time
-		System.out.println("Executing Shortest Remaining Time");
-		ArrayList<Process> processesForSRT = new ArrayList<Process>();
-		//Make a Deep Copy of the Original Processes
-		for(Process p : processes) {
-			processesForSRT.add(p.clone());
-		}
-		
-		
-		
-		//Call Shortest Remaining Time Algorithm. 
-				ShortestRemainingTime srt = new ShortestRemainingTime(processesForSRT);
-				//ArrayList<Process> shortestRemaining = srt.srt();
-				ArrayList<Process> shortestRemaining = srt.srtxyz();
-				
-				for(Process p : shortestRemaining) {
-					System.out.print(p.getName() + " ");
+				System.out.println("Executing Shortest Remaining Time");
+				ArrayList<Process> processesForSRT = new ArrayList<Process>();
+				//Make a Deep Copy of the Original Processes
+				for(Process p : processes) {
+					processesForSRT.add(p.clone());
 				}
-				System.out.println();
-		
-				System.out.println("---------------------------------------------------------------");
+				
+				
+				
+				//Call Shortest Remaining Time Algorithm. 
+						ShortestRemainingTime srt = new ShortestRemainingTime(processesForSRT);
+						//ArrayList<Process> shortestRemaining = srt.srt();
+						ArrayList<Process> shortestRemaining = srt.srtxyz();
+						
+						for(Process p : shortestRemaining) {
+							System.out.print(p.getName() + " ");
+						}
+						System.out.println();
+						System.out.printf("Average Turn Around Time for RR: %.1f\n", srt.averageTurnAroundTime(shortestRemaining));
+						System.out.printf("Average Wait Time for RR: %.1f\n", srt.averageWaitTime(shortestRemaining));
+						System.out.printf("Average Response Time for RR: %.1f\n", srt.averageResponseTime(shortestRemaining));
+						
+
+		System.out.println("---------------------------------------------------------------");
 
 		//END OF SHORTEST REMAINING TIME
-		
 		
 		//Start of the Round Robin Calls. 
 		System.out.println("Executing Round Robin");
@@ -124,6 +137,10 @@ public class ProcessScheduling {
 			System.out.print(p.getName() + " ");
 		}
 		System.out.println();
+		System.out.printf("Average Turn Around Time for RR: %.1f\n", RR.averageTurnAroundTime(roundRobin));
+		System.out.printf("Average Wait Time for RR: %.1f\n", RR.averageWaitTime(roundRobin));
+		System.out.printf("Average Response Time for RR: %.1f\n", RR.averageResponseTime(roundRobin));
+		
 		//END of the Round Robins. 
 		
 		System.out.println("---------------------------------------------------------------");
@@ -158,6 +175,8 @@ public class ProcessScheduling {
 			System.out.print(highestPriorityFirstp.get(i).getName() + " ");
 		}
 		System.out.println();
+      
+      hp.getTurnaroundTime(highestPriorityFirstp);
 		
 		//End of Highest Priority First. 
 		System.out.println("---------------------------------------------------------------");
