@@ -300,25 +300,69 @@ ArrayList<Process> processes;
    
    public float getWaitingTime(ArrayList<Process> p)
    {
-      float average = 0; 
+      float average = 0;    
       Set <Process> uniqueProcess =  new HashSet<Process>(); 
-      for (int i=0; i<p.size(); i++)
+      for (Process temp: p)
          {
-            if(uniqueProcess.add(p.get(i)))
+            uniqueProcess.add(temp);
+         }
+         
+         Iterator iter = uniqueProcess.iterator();
+         int lastSeen = 0;
+         int seenCounter = 0;
+         while(iter.hasNext())
+         {
+            Process temp = ((Process)iter.next());
+
+            for(int i=0; i<p.size(); i++)
             {
-               average = average + i-(p.get(i)).getArrivalTime();
-            }
+               if(temp.getName()==p.get(i).getName())
+               {
+                  seenCounter ++; 
+                  lastSeen = i; 
+               }
+            }  
+            average = average + (lastSeen-seenCounter);
+            lastSeen = 0; 
+            seenCounter = 0;
          }
       
-      return average/uniqueProcess.size();
-              
+      return average/uniqueProcess.size();              
    }
    
    
    public float getResponseTime(ArrayList<Process> p)
    {
       float average = 0; 
+      Set <Process> uniqueProcess =  new HashSet<Process>(); 
+      for (int i=0; i<p.size(); i++)
+         {
+            uniqueProcess.add(p.get(i));
+         }
+      Iterator iter = uniqueProcess.iterator();
+         while(iter.hasNext())
+         {
+            Process temp = ((Process)iter.next());
+
+            for(int i=0; i<p.size(); i++)
+            {
+               if(temp.getName()==p.get(i).getName())
+               {
+                  average = average + i; 
+               }
+            }  
+         }
       
-      return average; 
+      return average/p.size();
+   }
+   public double getThroughput(ArrayList<Process> p)
+   {   
+      Set <Process> uniqueProcess =  new HashSet<Process>(); 
+      for (Process temp: p)
+         {
+            uniqueProcess.add(temp);
+         }
+      
+      return (uniqueProcess.size() + 0.0) /p.size(); 
    }
 }

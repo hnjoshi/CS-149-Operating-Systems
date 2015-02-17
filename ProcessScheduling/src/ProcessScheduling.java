@@ -217,10 +217,10 @@ public class ProcessScheduling {
 			}
 			System.out.println();
 			
-			//avgTurnAroundTimeHPFNP += getters for turnaround time of HPF non preemptive. 
-			//avgWaitTimeHPFNP += 
-			//avgResponseTimeHPFNP += 
-			//avgThroughputHPFNP +=
+			avgTurnAroundTimeHPFNP += h.getTurnaroundTime(highestPriorityFirst);
+			avgWaitTimeHPFNP += h.getWaitingTime(highestPriorityFirst);
+			avgResponseTimeHPFNP += h.getResponseTime(highestPriorityFirst);
+			avgThroughputHPFNP += h.getThroughput(highestPriorityFirst);
 			
 			System.out.println("---------------------------------------------------------------");
 			System.out.println("Executing Highest Priority First [Preemptive]");
@@ -240,10 +240,10 @@ public class ProcessScheduling {
 			System.out.println();
 			hp.getTurnaroundTime(highestPriorityFirstp);
 
-			//avgTurnAroundTimeHPFP +=
-			//avgWaitTimeHPFP +=
-			//avgResponseTimeHPFP +=
-			//avgThroughputHPFP +=
+			avgTurnAroundTimeHPFP += hp.getTurnaroundTime(highestPriorityFirstp);
+			avgWaitTimeHPFP += hp.getWaitingTime(highestPriorityFirstp);
+			avgResponseTimeHPFP += hp.getResponseTime(highestPriorityFirstp);
+			avgThroughputHPFP +=hp.getThroughput(highestPriorityFirstp);
 			
 			//End of Highest Priority First. 
 			System.out.println("---------------------------------------------------------------");
@@ -304,28 +304,20 @@ public class ProcessScheduling {
 		System.out.printf("Average Response Time: %.2f\n", avgResponseTimeRR);
 		System.out.printf("Average Throughput: %.2f\n", avgThroughputRR);
 		
-<<<<<<< HEAD
-		for(int i = 0; i < highestPriorityFirstp.size(); i++) {
-			System.out.print(highestPriorityFirstp.get(i).getName() + " ");
-		}
-		System.out.println();
-      System.out.println(processes.size());
-      System.out.println(hp.getTurnaroundTime(highestPriorityFirstp));
-		System.out.println(hp.getWaitingTime(highestPriorityFirstp));
-		//End of Highest Priority First. 
+
+		 
 		System.out.println("---------------------------------------------------------------");
-=======
+
 		System.out.println("Averages for HPF [Non preemptive]");
 		System.out.printf("Average Turn Around Time: %.2f\n", avgTurnAroundTimeHPFNP);
 		System.out.printf("Average Wait Time: %.2f\n", avgWaitTimeHPFNP);
 		System.out.printf("Average Response Time: %.2f\n", avgResponseTimeHPFNP);
-		System.out.printf("Average Throughput: %.2f\n", avgThroughputHPFNP);
+		System.out.printf("Average Throughput: %.5f\n", avgThroughputHPFNP);
 		
 		System.out.println("Averages for HPF [preemptive]");
 		System.out.printf("Average Turn Around Time: %.2f\n", avgTurnAroundTimeHPFP);
 		System.out.printf("Average Wait Time: %.2f\n", avgWaitTimeHPFP);
 		System.out.printf("Average Response Time: %.2f\n", avgResponseTimeHPFP);
-		System.out.printf("Average Throughput: %.2f\n", avgThroughputHPFP);
->>>>>>> origin/master
+		System.out.printf("Average Throughput: %.5f\n", avgThroughputHPFP);
 	}
 }
