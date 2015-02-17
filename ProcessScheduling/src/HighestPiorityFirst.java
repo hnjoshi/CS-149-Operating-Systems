@@ -1,6 +1,7 @@
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 /**
@@ -114,12 +115,6 @@ ArrayList<Process> processes;
 				isFull = true;
 			}
 		}
-      
-      System.out.println("Total processes arrived = "+Total_Processes);
-		System.out.println("Total processes served = "+(counter));
-		System.out.println("Total processes runtime = "+runTime);
-		System.out.println("\nTotal runtime = "+runTime);
-		System.out.println("Last Process served was "+ p.getName()+".\n");
       
       return result;
    }
@@ -268,33 +263,62 @@ ArrayList<Process> processes;
             
          }		
       }
-      
-      
-      System.out.println("Total processes arrived = "+Total_Processes);
-		System.out.println("Total processes served = "+(counter));
-		System.out.println("Total processes runtime = "+runTime);
-		System.out.println("\nTotal runtime = "+runTime);
-		System.out.println("Last Process served was "+ result.get(result.size()-1).getName() +".\n");
             
       return result;
    }
    
-   public int getTurnaroundTime(ArrayList<Process> p)
+   public float getTurnaroundTime(ArrayList<Process> p)
    {
-      int average = 0; 
-    //  ArrayList<Process> pro =  new ArrayList<Process>();    
+      float average = 0;    
       Set <Process> uniqueProcess =  new HashSet<Process>(); 
       for (Process temp: p)
          {
             uniqueProcess.add(temp);
-          /*  if(pro.contains(p))
-            {
-               pro.add(temp);
-            }
-            */ 
          }
-         System.out.println(uniqueProcess.size());
          
+         Iterator iter = uniqueProcess.iterator();
+         float tempCounter = 0; 
+         while(iter.hasNext())
+         {
+            Process temp = ((Process)iter.next());
+            int lastSeen = 0;
+            for(int i=0; i<p.size(); i++)
+            {
+               if(temp.getName()==p.get(i).getName())
+               {
+                  tempCounter = i-temp.getArrivalTime(); 
+               }
+            }  
+            average = average + tempCounter; 
+            tempCounter = 0; 
+         }
+         
+      return average/uniqueProcess.size(); 
+   }
+   
+   
+   
+   public float getWaitingTime(ArrayList<Process> p)
+   {
+      float average = 0; 
+      Set <Process> uniqueProcess =  new HashSet<Process>(); 
+      for (int i=0; i<p.size(); i++)
+         {
+            if(uniqueProcess.add(p.get(i)))
+            {
+               average = average + i-(p.get(i)).getArrivalTime();
+            }
+         }
+      
+      return average/uniqueProcess.size();
+              
+   }
+   
+   
+   public float getResponseTime(ArrayList<Process> p)
+   {
+      float average = 0; 
+      
       return average; 
    }
 }

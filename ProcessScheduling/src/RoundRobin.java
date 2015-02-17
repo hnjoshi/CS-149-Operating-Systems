@@ -30,7 +30,6 @@ public class RoundRobin {
 			}
 			index++;
 		}
-		
 		System.out.println("Total Size is: " + result.size());
 		return result;
 	}
