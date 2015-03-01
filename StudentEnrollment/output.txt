@@ -1,0 +1,151 @@
+TIME | EVENT
+0:00 | Student 0 started Processing from EE Queue Student's Priority is: 0
+0:00 | Student 129 arrives Priority: 3 Class choice: 3
+0:00 | Student 129 started Processing from EE Queue Student's Priority is: 3
+0:00 | Student 0 started Processing from RS Queue Student's Priority is: 0
+0:00 | Student 0 started Processing from GS Queue Student's Priority is: 0
+0:01 | Student 109 arrives Priority: 3 Class choice: 3
+0:01 | Student 109 started Processing from EE Queue Student's Priority is: 3
+0:03 | Student 117 arrives Priority: 3 Class choice: 2
+0:03 | Student 117 started Processing from EE Queue Student's Priority is: 3
+0:05 | Student 154 arrives Priority: 2 Class choice: 2
+0:09 | Student 163 arrives Priority: 2 Class choice: 1
+0:10 | Student 136 arrives Priority: 1 Class choice: 3
+0:10 | Student 136 started Processing from GS Queue Student's Priority is: 1
+0:10 | Student 136 enrolled in class section 3 Student's Priority is 1
+0:13 | Student 141 arrives Priority: 1 Class choice: 1
+0:13 | Student 141 started Processing from GS Queue Student's Priority is: 1
+0:13 | Student 141 enrolled in class section 1 Student's Priority is: 1
+0:13 | Student 170 arrives Priority: 1 Class choice: 3
+0:13 | Student 170 started Processing from GS Queue Student's Priority is: 1
+0:13 | Student 170 enrolled in class section 3 Student's Priority is 1
+0:21 | Student 111 arrives Priority: 2 Class choice: 1
+0:21 | Student 144 arrives Priority: 2 Class choice: 1
+0:23 | Student 113 arrives Priority: 1 Class choice: 2
+0:23 | Student 113 started Processing from GS Queue Student's Priority is: 1
+0:23 | Student 113 enrolled in class section 2 Student's Priority is: 1
+0:23 | Student 114 arrives Priority: 1 Class choice: 1
+0:23 | Student 114 started Processing from GS Queue Student's Priority is: 1
+0:23 | Student 114 enrolled in class section 1 Student's Priority is: 1
+0:23 | Student 150 arrives Priority: 3 Class choice: 3
+0:23 | Student 150 started Processing from EE Queue Student's Priority is: 3
+0:28 | Student 132 arrives Priority: 2 Class choice: 2
+0:28 | Student 172 arrives Priority: 2 Class choice: 2
+0:34 | Student 104 arrives Priority: 1 Class choice: 2
+0:34 | Student 104 started Processing from GS Queue Student's Priority is: 1
+0:34 | Student 104 enrolled in class section 2 Student's Priority is: 1
+0:37 | Student 103 arrives Priority: 2 Class choice: 3
+0:38 | Student 110 arrives Priority: 1 Class choice: 2
+0:38 | Student 110 started Processing from GS Queue Student's Priority is: 1
+0:38 | Student 110 enrolled in class section 2 Student's Priority is: 1
+0:41 | Student 157 arrives Priority: 1 Class choice: 3
+0:41 | Student 157 started Processing from GS Queue Student's Priority is: 1
+0:41 | Student 157 enrolled in class section 3 Student's Priority is 1
+0:43 | Student 142 arrives Priority: 1 Class choice: 1
+0:43 | Student 142 started Processing from GS Queue Student's Priority is: 1
+0:43 | Student 142 enrolled in class section 1 Student's Priority is: 1
+0:47 | Student 115 arrives Priority: 2 Class choice: 3
+0:47 | Student 158 arrives Priority: 1 Class choice: 3
+0:47 | Student 158 started Processing from GS Queue Student's Priority is: 1
+0:47 | Student 158 enrolled in class section 3 Student's Priority is 1
+0:49 | Student 146 arrives Priority: 3 Class choice: 1
+0:49 | Student 146 started Processing from EE Queue Student's Priority is: 3
+0:51 | Student 123 arrives Priority: 3 Class choice: 1
+0:51 | Student 123 started Processing from EE Queue Student's Priority is: 3
+0:51 | Student 143 arrives Priority: 2 Class choice: 2
+0:52 | Student 122 arrives Priority: 3 Class choice: 3
+0:52 | Student 122 started Processing from EE Queue Student's Priority is: 3
+0:53 | Student 156 arrives Priority: 2 Class choice: 3
+0:55 | Student 118 arrives Priority: 3 Class choice: 1
+0:55 | Student 118 started Processing from EE Queue Student's Priority is: 3
+0:57 | Student 116 arrives Priority: 2 Class choice: 3
+0:57 | Student 166 arrives Priority: 2 Class choice: 3
+0:59 | Student 160 arrives Priority: 1 Class choice: 2
+0:59 | Student 160 started Processing from GS Queue Student's Priority is: 1
+0:59 | Student 160 enrolled in class section 2 Student's Priority is: 1
+1:03 | Student 112 arrives Priority: 3 Class choice: 1
+1:03 | Student 112 started Processing from EE Queue Student's Priority is: 3
+1:03 | Student 169 arrives Priority: 3 Class choice: 2
+1:03 | Student 169 started Processing from EE Queue Student's Priority is: 3
+1:03 | Student 175 arrives Priority: 1 Class choice: 3
+1:03 | Student 175 started Processing from GS Queue Student's Priority is: 1
+1:03 | Student 175 enrolled in class section 3 Student's Priority is 1
+1:04 | Student 135 arrives Priority: 2 Class choice: 2
+1:04 | Student 173 arrives Priority: 1 Class choice: 2
+1:04 | Student 173 started Processing from GS Queue Student's Priority is: 1
+1:04 | Student 173 enrolled in class section 2 Student's Priority is: 1
+1:06 | Student 105 arrives Priority: 2 Class choice: 3
+1:06 | Student 174 arrives Priority: 1 Class choice: 2
+1:06 | Student 174 started Processing from GS Queue Student's Priority is: 1
+1:06 | Student 174 enrolled in class section 2 Student's Priority is: 1
+1:08 | Student 153 arrives Priority: 2 Class choice: 3
+1:11 | Student 147 arrives Priority: 2 Class choice: 2
+1:12 | Student 162 arrives Priority: 1 Class choice: 2
+1:12 | Student 162 started Processing from GS Queue Student's Priority is: 1
+1:12 | Student 162 enrolled in class section 2 Student's Priority is: 1
+1:13 | Student 126 arrives Priority: 1 Class choice: 1
+1:13 | Student 126 started Processing from GS Queue Student's Priority is: 1
+1:13 | Student 126 enrolled in class section 1 Student's Priority is: 1
+1:14 | Student 102 arrives Priority: 3 Class choice: 1
+1:14 | Student 102 started Processing from EE Queue Student's Priority is: 3
+1:14 | Student 124 arrives Priority: 1 Class choice: 2
+1:14 | Student 124 started Processing from GS Queue Student's Priority is: 1
+1:14 | Student 124 enrolled in class section 2 Student's Priority is: 1
+1:14 | Student 125 arrives Priority: 1 Class choice: 2
+1:14 | Student 125 started Processing from GS Queue Student's Priority is: 1
+1:14 | Student 125 enrolled in class section 2 Student's Priority is: 1
+1:14 | Student 151 arrives Priority: 2 Class choice: 3
+1:14 | Student 164 arrives Priority: 3 Class choice: 3
+1:14 | Student 164 started Processing from EE Queue Student's Priority is: 3
+1:18 | Student 131 arrives Priority: 3 Class choice: 3
+1:18 | Student 131 started Processing from EE Queue Student's Priority is: 3
+1:20 | Student 119 arrives Priority: 2 Class choice: 1
+1:20 | Student 139 arrives Priority: 2 Class choice: 2
+1:23 | Student 155 arrives Priority: 2 Class choice: 1
+1:25 | Student 159 arrives Priority: 1 Class choice: 2
+1:25 | Student 159 started Processing from GS Queue Student's Priority is: 1
+1:25 | Student 159 enrolled in class section 2 Student's Priority is: 1
+1:27 | Student 168 arrives Priority: 2 Class choice: 3
+1:27 | Student 171 arrives Priority: 2 Class choice: 1
+1:28 | Student 128 arrives Priority: 1 Class choice: 1
+1:28 | Student 128 started Processing from GS Queue Student's Priority is: 1
+1:28 | Student 128 enrolled in class section 1 Student's Priority is: 1
+1:30 | Student 161 arrives Priority: 3 Class choice: 1
+1:30 | Student 161 started Processing from EE Queue Student's Priority is: 3
+1:31 | Student 101 arrives Priority: 3 Class choice: 3
+1:31 | Student 101 started Processing from EE Queue Student's Priority is: 3
+1:32 | Student 137 arrives Priority: 3 Class choice: 2
+1:32 | Student 137 started Processing from EE Queue Student's Priority is: 3
+1:34 | Student 133 arrives Priority: 2 Class choice: 2
+1:35 | Student 120 arrives Priority: 3 Class choice: 1
+1:35 | Student 120 started Processing from EE Queue Student's Priority is: 3
+1:38 | Student 148 arrives Priority: 3 Class choice: 2
+1:38 | Student 148 started Processing from EE Queue Student's Priority is: 3
+1:43 | Student 145 arrives Priority: 2 Class choice: 3
+1:43 | Student 152 arrives Priority: 2 Class choice: 3
+1:44 | Student 130 arrives Priority: 2 Class choice: 2
+1:44 | Student 167 arrives Priority: 2 Class choice: 1
+1:45 | Student 140 arrives Priority: 2 Class choice: 1
+1:45 | Student 149 arrives Priority: 3 Class choice: 3
+1:45 | Student 149 started Processing from EE Queue Student's Priority is: 3
+1:47 | Student 107 arrives Priority: 2 Class choice: 3
+1:48 | Student 106 arrives Priority: 1 Class choice: 3
+1:48 | Student 106 started Processing from GS Queue Student's Priority is: 1
+1:48 | Student 106 enrolled in class section 3 Student's Priority is 1
+1:48 | Student 138 arrives Priority: 2 Class choice: 3
+1:49 | Student 134 arrives Priority: 3 Class choice: 1
+1:49 | Student 134 started Processing from EE Queue Student's Priority is: 3
+1:50 | Student 108 arrives Priority: 2 Class choice: 1
+1:53 | Student 165 arrives Priority: 2 Class choice: 1
+1:58 | Student 121 arrives Priority: 3 Class choice: 1
+1:58 | Student 121 started Processing from EE Queue Student's Priority is: 3
+1:58 | Student 127 arrives Priority: 3 Class choice: 1
+1:58 | Student 127 started Processing from EE Queue Student's Priority is: 3
+
+Total Processes completed: 43
+GS created: 21
+GS completed: 21
+RS created: 32
+RS completed: 0
+EE created: 22
+EE completed: 22
