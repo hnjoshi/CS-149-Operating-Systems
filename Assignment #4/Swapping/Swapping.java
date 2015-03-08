@@ -19,16 +19,15 @@ public class Swapping {
 		int[] sizes = {5, 11, 17, 31};
 		do{
 			Process p = new Process();
-			Random rn = new Random();
-			int sizeIndex = rn.nextInt() % 4;
-			int duration = (rn.nextInt() % 5) + 1;		
-			
+			int sizeIndex = (int) (Math.random() * 4);
+			int duration = (int) ((Math.random() * 5)+1);
+                        
 			p.setSize(sizes[sizeIndex]);
 			p.setDuration(duration);
 			p.setName((char) nameCounter++);
 			
 			//If we run out of A-Z start with a-z. 
-			if(nameCounter > 90 && nameCounter < 97) {
+			if(nameCounter == 91) {
 				nameCounter = 97;
 			}
 			
