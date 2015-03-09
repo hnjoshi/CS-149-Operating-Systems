@@ -1,0 +1,305 @@
+Process: Name: A Size: 17 Duration  5
+Process: Name: B Size: 11 Duration  4
+Process: Name: C Size: 11 Duration  4
+Process: Name: D Size: 11 Duration  3
+Process: Name: E Size: 17 Duration  1
+Process: Name: F Size: 11 Duration  1
+Process: Name: G Size: 17 Duration  4
+Process: Name: H Size: 11 Duration  5
+Process: Name: I Size:  5 Duration  2
+Process: Name: J Size: 11 Duration  4
+Process: Name: K Size:  5 Duration  3
+Process: Name: L Size:  5 Duration  4
+Process: Name: M Size:  5 Duration  2
+Process: Name: N Size: 17 Duration  5
+Process: Name: O Size: 17 Duration  2
+Process: Name: P Size:  5 Duration  5
+Process: Name: Q Size: 11 Duration  5
+Process: Name: R Size: 11 Duration  2
+Process: Name: S Size: 17 Duration  4
+Process: Name: T Size: 31 Duration  2
+Process: Name: U Size: 11 Duration  5
+Process: Name: V Size: 17 Duration  3
+Process: Name: W Size: 31 Duration  2
+Process: Name: X Size: 11 Duration  4
+Process: Name: Y Size:  5 Duration  1
+Process: Name: Z Size:  5 Duration  1
+Process: Name: a Size: 17 Duration  3
+Process: Name: b Size: 17 Duration  1
+Process: Name: c Size: 11 Duration  1
+Process: Name: d Size:  5 Duration  2
+Process: Name: e Size: 31 Duration  2
+Process: Name: f Size: 31 Duration  2
+Process: Name: g Size: 31 Duration  5
+Process: Name: h Size:  5 Duration  5
+Process: Name: i Size: 11 Duration  4
+Process: Name: j Size: 11 Duration  5
+Process: Name: k Size: 31 Duration  4
+Process: Name: l Size: 31 Duration  1
+Process: Name: m Size: 11 Duration  1
+Process: Name: n Size:  5 Duration  1
+Process: Name: o Size: 31 Duration  5
+Process: Name: p Size:  5 Duration  4
+Process: Name: q Size:  5 Duration  2
+Process: Name: r Size: 11 Duration  2
+Process: Name: s Size:  5 Duration  5
+Process: Name: t Size: 31 Duration  1
+Process: Name: u Size:  5 Duration  5
+Process: Name: v Size: 31 Duration  2
+Process: Name: w Size: 11 Duration  5
+Process: Name: x Size: 31 Duration  4
+Process: Name: y Size:  5 Duration  3
+Process: Name: z Size:  5 Duration  4
+Process: Name: 0 Size:  5 Duration  5
+Process: Name: 1 Size: 17 Duration  4
+Process: Name: 2 Size:  5 Duration  4
+Process: Name: 3 Size: 11 Duration  1
+Process: Name: 4 Size:  5 Duration  1
+Process: Name: 5 Size: 31 Duration  5
+Process: Name: 6 Size: 11 Duration  2
+Process: Name: 7 Size:  5 Duration  3
+Process: Name: 8 Size: 17 Duration  4
+time  0: Swapped In Process A Size is 17 Duration is 5
+AAAAAAAAAAAAAAAAA...................................................................................
+time  0: Swapped In Process B Size is 11 Duration is 4
+AAAAAAAAAAAAAAAAABBBBBBBBBBB........................................................................
+time  0: Swapped In Process C Size is 11 Duration is 4
+AAAAAAAAAAAAAAAAABBBBBBBBBBBCCCCCCCCCCC.............................................................
+time  0: Swapped In Process D Size is 11 Duration is 3
+AAAAAAAAAAAAAAAAABBBBBBBBBBBCCCCCCCCCCCDDDDDDDDDDD..................................................
+time  0: Swapped In Process E Size is 17 Duration is 1
+AAAAAAAAAAAAAAAAABBBBBBBBBBBCCCCCCCCCCCDDDDDDDDDDDEEEEEEEEEEEEEEEEE.................................
+time  0: Swapped In Process F Size is 11 Duration is 1
+AAAAAAAAAAAAAAAAABBBBBBBBBBBCCCCCCCCCCCDDDDDDDDDDDEEEEEEEEEEEEEEEEEFFFFFFFFFFF......................
+time  0: Swapped In Process G Size is 17 Duration is 4
+AAAAAAAAAAAAAAAAABBBBBBBBBBBCCCCCCCCCCCDDDDDDDDDDDEEEEEEEEEEEEEEEEEFFFFFFFFFFFGGGGGGGGGGGGGGGGG.....
+time  0: Swapped In Process I Size is  5 Duration is 2
+AAAAAAAAAAAAAAAAABBBBBBBBBBBCCCCCCCCCCCDDDDDDDDDDDEEEEEEEEEEEEEEEEEFFFFFFFFFFFGGGGGGGGGGGGGGGGGIIIII
+time   1: Swapped Out Process E
+AAAAAAAAAAAAAAAAABBBBBBBBBBBCCCCCCCCCCCDDDDDDDDDDD.................FFFFFFFFFFFGGGGGGGGGGGGGGGGGIIIII
+time   1: Swapped Out Process F
+AAAAAAAAAAAAAAAAABBBBBBBBBBBCCCCCCCCCCCDDDDDDDDDDD............................GGGGGGGGGGGGGGGGGIIIII
+time  1: Swapped In Process H Size is 11 Duration is 5
+AAAAAAAAAAAAAAAAABBBBBBBBBBBCCCCCCCCCCCDDDDDDDDDDDHHHHHHHHHHH.................GGGGGGGGGGGGGGGGGIIIII
+time  1: Swapped In Process J Size is 11 Duration is 4
+AAAAAAAAAAAAAAAAABBBBBBBBBBBCCCCCCCCCCCDDDDDDDDDDDHHHHHHHHHHHJJJJJJJJJJJ......GGGGGGGGGGGGGGGGGIIIII
+time  1: Swapped In Process K Size is  5 Duration is 3
+AAAAAAAAAAAAAAAAABBBBBBBBBBBCCCCCCCCCCCDDDDDDDDDDDHHHHHHHHHHHJJJJJJJJJJJKKKKK.GGGGGGGGGGGGGGGGGIIIII
+time   2: Swapped Out Process I
+AAAAAAAAAAAAAAAAABBBBBBBBBBBCCCCCCCCCCCDDDDDDDDDDDHHHHHHHHHHHJJJJJJJJJJJKKKKK.GGGGGGGGGGGGGGGGG.....
+time  2: Swapped In Process L Size is  5 Duration is 4
+AAAAAAAAAAAAAAAAABBBBBBBBBBBCCCCCCCCCCCDDDDDDDDDDDHHHHHHHHHHHJJJJJJJJJJJKKKKK.GGGGGGGGGGGGGGGGGLLLLL
+time   3: Swapped Out Process D
+AAAAAAAAAAAAAAAAABBBBBBBBBBBCCCCCCCCCCC...........HHHHHHHHHHHJJJJJJJJJJJKKKKK.GGGGGGGGGGGGGGGGGLLLLL
+time  3: Swapped In Process M Size is  5 Duration is 2
+AAAAAAAAAAAAAAAAABBBBBBBBBBBCCCCCCCCCCCMMMMM......HHHHHHHHHHHJJJJJJJJJJJKKKKK.GGGGGGGGGGGGGGGGGLLLLL
+time  3: Swapped In Process P Size is  5 Duration is 5
+AAAAAAAAAAAAAAAAABBBBBBBBBBBCCCCCCCCCCCMMMMMPPPPP.HHHHHHHHHHHJJJJJJJJJJJKKKKK.GGGGGGGGGGGGGGGGGLLLLL
+time   4: Swapped Out Process B
+AAAAAAAAAAAAAAAAA...........CCCCCCCCCCCMMMMMPPPPP.HHHHHHHHHHHJJJJJJJJJJJKKKKK.GGGGGGGGGGGGGGGGGLLLLL
+time   4: Swapped Out Process C
+AAAAAAAAAAAAAAAAA......................MMMMMPPPPP.HHHHHHHHHHHJJJJJJJJJJJKKKKK.GGGGGGGGGGGGGGGGGLLLLL
+time   4: Swapped Out Process G
+AAAAAAAAAAAAAAAAA......................MMMMMPPPPP.HHHHHHHHHHHJJJJJJJJJJJKKKKK..................LLLLL
+time   4: Swapped Out Process K
+AAAAAAAAAAAAAAAAA......................MMMMMPPPPP.HHHHHHHHHHHJJJJJJJJJJJ.......................LLLLL
+time  4: Swapped In Process N Size is 17 Duration is 5
+AAAAAAAAAAAAAAAAA......................MMMMMPPPPP.HHHHHHHHHHHJJJJJJJJJJJNNNNNNNNNNNNNNNNN......LLLLL
+time  4: Swapped In Process O Size is 17 Duration is 2
+AAAAAAAAAAAAAAAAAOOOOOOOOOOOOOOOOO.....MMMMMPPPPP.HHHHHHHHHHHJJJJJJJJJJJNNNNNNNNNNNNNNNNN......LLLLL
+time  4: Swapped In Process Y Size is  5 Duration is 1
+AAAAAAAAAAAAAAAAAOOOOOOOOOOOOOOOOO.....MMMMMPPPPP.HHHHHHHHHHHJJJJJJJJJJJNNNNNNNNNNNNNNNNNYYYYY.LLLLL
+time  4: Swapped In Process Z Size is  5 Duration is 1
+AAAAAAAAAAAAAAAAAOOOOOOOOOOOOOOOOOZZZZZMMMMMPPPPP.HHHHHHHHHHHJJJJJJJJJJJNNNNNNNNNNNNNNNNNYYYYY.LLLLL
+time   5: Swapped Out Process A
+.................OOOOOOOOOOOOOOOOOZZZZZMMMMMPPPPP.HHHHHHHHHHHJJJJJJJJJJJNNNNNNNNNNNNNNNNNYYYYY.LLLLL
+time   5: Swapped Out Process J
+.................OOOOOOOOOOOOOOOOOZZZZZMMMMMPPPPP.HHHHHHHHHHH...........NNNNNNNNNNNNNNNNNYYYYY.LLLLL
+time   5: Swapped Out Process M
+.................OOOOOOOOOOOOOOOOOZZZZZ.....PPPPP.HHHHHHHHHHH...........NNNNNNNNNNNNNNNNNYYYYY.LLLLL
+time   5: Swapped Out Process Y
+.................OOOOOOOOOOOOOOOOOZZZZZ.....PPPPP.HHHHHHHHHHH...........NNNNNNNNNNNNNNNNN......LLLLL
+time   5: Swapped Out Process Z
+.................OOOOOOOOOOOOOOOOO..........PPPPP.HHHHHHHHHHH...........NNNNNNNNNNNNNNNNN......LLLLL
+time  5: Swapped In Process Q Size is 11 Duration is 5
+QQQQQQQQQQQ......OOOOOOOOOOOOOOOOO..........PPPPP.HHHHHHHHHHH...........NNNNNNNNNNNNNNNNN......LLLLL
+time  5: Swapped In Process R Size is 11 Duration is 2
+QQQQQQQQQQQ......OOOOOOOOOOOOOOOOO..........PPPPP.HHHHHHHHHHHRRRRRRRRRRRNNNNNNNNNNNNNNNNN......LLLLL
+time  5: Swapped In Process d Size is  5 Duration is 2
+QQQQQQQQQQQ......OOOOOOOOOOOOOOOOOddddd.....PPPPP.HHHHHHHHHHHRRRRRRRRRRRNNNNNNNNNNNNNNNNN......LLLLL
+time  5: Swapped In Process h Size is  5 Duration is 5
+QQQQQQQQQQQhhhhh.OOOOOOOOOOOOOOOOOddddd.....PPPPP.HHHHHHHHHHHRRRRRRRRRRRNNNNNNNNNNNNNNNNN......LLLLL
+time  5: Swapped In Process n Size is  5 Duration is 1
+QQQQQQQQQQQhhhhh.OOOOOOOOOOOOOOOOOddddd.....PPPPP.HHHHHHHHHHHRRRRRRRRRRRNNNNNNNNNNNNNNNNNnnnnn.LLLLL
+time  5: Swapped In Process p Size is  5 Duration is 4
+QQQQQQQQQQQhhhhh.OOOOOOOOOOOOOOOOOdddddpppppPPPPP.HHHHHHHHHHHRRRRRRRRRRRNNNNNNNNNNNNNNNNNnnnnn.LLLLL
+time   6: Swapped Out Process H
+QQQQQQQQQQQhhhhh.OOOOOOOOOOOOOOOOOdddddpppppPPPPP............RRRRRRRRRRRNNNNNNNNNNNNNNNNNnnnnn.LLLLL
+time   6: Swapped Out Process L
+QQQQQQQQQQQhhhhh.OOOOOOOOOOOOOOOOOdddddpppppPPPPP............RRRRRRRRRRRNNNNNNNNNNNNNNNNNnnnnn......
+time   6: Swapped Out Process O
+QQQQQQQQQQQhhhhh..................dddddpppppPPPPP............RRRRRRRRRRRNNNNNNNNNNNNNNNNNnnnnn......
+time   6: Swapped Out Process n
+QQQQQQQQQQQhhhhh..................dddddpppppPPPPP............RRRRRRRRRRRNNNNNNNNNNNNNNNNN...........
+time  6: Swapped In Process S Size is 17 Duration is 4
+QQQQQQQQQQQhhhhhSSSSSSSSSSSSSSSSS.dddddpppppPPPPP............RRRRRRRRRRRNNNNNNNNNNNNNNNNN...........
+time  6: Swapped In Process U Size is 11 Duration is 5
+QQQQQQQQQQQhhhhhSSSSSSSSSSSSSSSSS.dddddpppppPPPPPUUUUUUUUUUU.RRRRRRRRRRRNNNNNNNNNNNNNNNNN...........
+time  6: Swapped In Process X Size is 11 Duration is 4
+QQQQQQQQQQQhhhhhSSSSSSSSSSSSSSSSS.dddddpppppPPPPPUUUUUUUUUUU.RRRRRRRRRRRNNNNNNNNNNNNNNNNNXXXXXXXXXXX
+time   7: Swapped Out Process R
+QQQQQQQQQQQhhhhhSSSSSSSSSSSSSSSSS.dddddpppppPPPPPUUUUUUUUUUU............NNNNNNNNNNNNNNNNNXXXXXXXXXXX
+time   7: Swapped Out Process d
+QQQQQQQQQQQhhhhhSSSSSSSSSSSSSSSSS......pppppPPPPPUUUUUUUUUUU............NNNNNNNNNNNNNNNNNXXXXXXXXXXX
+time  7: Swapped In Process c Size is 11 Duration is 1
+QQQQQQQQQQQhhhhhSSSSSSSSSSSSSSSSS......pppppPPPPPUUUUUUUUUUUccccccccccc.NNNNNNNNNNNNNNNNNXXXXXXXXXXX
+time  7: Swapped In Process q Size is  5 Duration is 2
+QQQQQQQQQQQhhhhhSSSSSSSSSSSSSSSSSqqqqq.pppppPPPPPUUUUUUUUUUUccccccccccc.NNNNNNNNNNNNNNNNNXXXXXXXXXXX
+time   8: Swapped Out Process P
+QQQQQQQQQQQhhhhhSSSSSSSSSSSSSSSSSqqqqq.ppppp.....UUUUUUUUUUUccccccccccc.NNNNNNNNNNNNNNNNNXXXXXXXXXXX
+time   8: Swapped Out Process c
+QQQQQQQQQQQhhhhhSSSSSSSSSSSSSSSSSqqqqq.ppppp.....UUUUUUUUUUU............NNNNNNNNNNNNNNNNNXXXXXXXXXXX
+time  8: Swapped In Process i Size is 11 Duration is 4
+QQQQQQQQQQQhhhhhSSSSSSSSSSSSSSSSSqqqqq.ppppp.....UUUUUUUUUUUiiiiiiiiiii.NNNNNNNNNNNNNNNNNXXXXXXXXXXX
+time  8: Swapped In Process s Size is  5 Duration is 5
+QQQQQQQQQQQhhhhhSSSSSSSSSSSSSSSSSqqqqq.pppppsssssUUUUUUUUUUUiiiiiiiiiii.NNNNNNNNNNNNNNNNNXXXXXXXXXXX
+time   9: Swapped Out Process N
+QQQQQQQQQQQhhhhhSSSSSSSSSSSSSSSSSqqqqq.pppppsssssUUUUUUUUUUUiiiiiiiiiii..................XXXXXXXXXXX
+time   9: Swapped Out Process p
+QQQQQQQQQQQhhhhhSSSSSSSSSSSSSSSSSqqqqq......sssssUUUUUUUUUUUiiiiiiiiiii..................XXXXXXXXXXX
+time   9: Swapped Out Process q
+QQQQQQQQQQQhhhhhSSSSSSSSSSSSSSSSS...........sssssUUUUUUUUUUUiiiiiiiiiii..................XXXXXXXXXXX
+time  9: Swapped In Process V Size is 17 Duration is 3
+QQQQQQQQQQQhhhhhSSSSSSSSSSSSSSSSS...........sssssUUUUUUUUUUUiiiiiiiiiiiVVVVVVVVVVVVVVVVV.XXXXXXXXXXX
+time  9: Swapped In Process j Size is 11 Duration is 5
+QQQQQQQQQQQhhhhhSSSSSSSSSSSSSSSSSjjjjjjjjjjjsssssUUUUUUUUUUUiiiiiiiiiiiVVVVVVVVVVVVVVVVV.XXXXXXXXXXX
+time  10: Swapped Out Process Q
+...........hhhhhSSSSSSSSSSSSSSSSSjjjjjjjjjjjsssssUUUUUUUUUUUiiiiiiiiiiiVVVVVVVVVVVVVVVVV.XXXXXXXXXXX
+time  10: Swapped Out Process h
+................SSSSSSSSSSSSSSSSSjjjjjjjjjjjsssssUUUUUUUUUUUiiiiiiiiiiiVVVVVVVVVVVVVVVVV.XXXXXXXXXXX
+time  10: Swapped Out Process S
+.................................jjjjjjjjjjjsssssUUUUUUUUUUUiiiiiiiiiiiVVVVVVVVVVVVVVVVV.XXXXXXXXXXX
+time  10: Swapped Out Process X
+.................................jjjjjjjjjjjsssssUUUUUUUUUUUiiiiiiiiiiiVVVVVVVVVVVVVVVVV............
+time 10: Swapped In Process T Size is 31 Duration is 2
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT..jjjjjjjjjjjsssssUUUUUUUUUUUiiiiiiiiiiiVVVVVVVVVVVVVVVVV............
+time 10: Swapped In Process m Size is 11 Duration is 1
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT..jjjjjjjjjjjsssssUUUUUUUUUUUiiiiiiiiiiiVVVVVVVVVVVVVVVVVmmmmmmmmmmm.
+time  11: Swapped Out Process U
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT..jjjjjjjjjjjsssss...........iiiiiiiiiiiVVVVVVVVVVVVVVVVVmmmmmmmmmmm.
+time  11: Swapped Out Process m
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT..jjjjjjjjjjjsssss...........iiiiiiiiiiiVVVVVVVVVVVVVVVVV............
+time 11: Swapped In Process r Size is 11 Duration is 2
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT..jjjjjjjjjjjsssss...........iiiiiiiiiiiVVVVVVVVVVVVVVVVVrrrrrrrrrrr.
+time 11: Swapped In Process u Size is  5 Duration is 5
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT..jjjjjjjjjjjsssssuuuuu......iiiiiiiiiiiVVVVVVVVVVVVVVVVVrrrrrrrrrrr.
+time 11: Swapped In Process y Size is  5 Duration is 3
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT..jjjjjjjjjjjsssssuuuuuyyyyy.iiiiiiiiiiiVVVVVVVVVVVVVVVVVrrrrrrrrrrr.
+time  12: Swapped Out Process i
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT..jjjjjjjjjjjsssssuuuuuyyyyy............VVVVVVVVVVVVVVVVVrrrrrrrrrrr.
+time  12: Swapped Out Process V
+TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT..jjjjjjjjjjjsssssuuuuuyyyyy.............................rrrrrrrrrrr.
+time  12: Swapped Out Process T
+.................................jjjjjjjjjjjsssssuuuuuyyyyy.............................rrrrrrrrrrr.
+time 12: Swapped In Process W Size is 31 Duration is 2
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW..jjjjjjjjjjjsssssuuuuuyyyyy.............................rrrrrrrrrrr.
+time 12: Swapped In Process a Size is 17 Duration is 3
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW..jjjjjjjjjjjsssssuuuuuyyyyyaaaaaaaaaaaaaaaaa............rrrrrrrrrrr.
+time 12: Swapped In Process w Size is 11 Duration is 5
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW..jjjjjjjjjjjsssssuuuuuyyyyyaaaaaaaaaaaaaaaaawwwwwwwwwww.rrrrrrrrrrr.
+time  13: Swapped Out Process s
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW..jjjjjjjjjjj.....uuuuuyyyyyaaaaaaaaaaaaaaaaawwwwwwwwwww.rrrrrrrrrrr.
+time  13: Swapped Out Process r
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW..jjjjjjjjjjj.....uuuuuyyyyyaaaaaaaaaaaaaaaaawwwwwwwwwww.............
+time 13: Swapped In Process z Size is  5 Duration is 4
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW..jjjjjjjjjjj.....uuuuuyyyyyaaaaaaaaaaaaaaaaawwwwwwwwwwwzzzzz........
+time 13: Swapped In Process 0 Size is  5 Duration is 5
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW..jjjjjjjjjjj.....uuuuuyyyyyaaaaaaaaaaaaaaaaawwwwwwwwwwwzzzzz00000...
+time 13: Swapped In Process 2 Size is  5 Duration is 4
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW..jjjjjjjjjjj22222uuuuuyyyyyaaaaaaaaaaaaaaaaawwwwwwwwwwwzzzzz00000...
+time  14: Swapped Out Process j
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW.............22222uuuuuyyyyyaaaaaaaaaaaaaaaaawwwwwwwwwwwzzzzz00000...
+time  14: Swapped Out Process y
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW.............22222uuuuu.....aaaaaaaaaaaaaaaaawwwwwwwwwwwzzzzz00000...
+time  14: Swapped Out Process W
+............................................22222uuuuu.....aaaaaaaaaaaaaaaaawwwwwwwwwwwzzzzz00000...
+time 14: Swapped In Process b Size is 17 Duration is 1
+bbbbbbbbbbbbbbbbb...........................22222uuuuu.....aaaaaaaaaaaaaaaaawwwwwwwwwwwzzzzz00000...
+time 14: Swapped In Process 1 Size is 17 Duration is 4
+bbbbbbbbbbbbbbbbb11111111111111111..........22222uuuuu.....aaaaaaaaaaaaaaaaawwwwwwwwwwwzzzzz00000...
+time 14: Swapped In Process 4 Size is  5 Duration is 1
+bbbbbbbbbbbbbbbbb1111111111111111144444.....22222uuuuu.....aaaaaaaaaaaaaaaaawwwwwwwwwwwzzzzz00000...
+time 14: Swapped In Process 7 Size is  5 Duration is 3
+bbbbbbbbbbbbbbbbb11111111111111111444447777722222uuuuu.....aaaaaaaaaaaaaaaaawwwwwwwwwwwzzzzz00000...
+time  15: Swapped Out Process a
+bbbbbbbbbbbbbbbbb11111111111111111444447777722222uuuuu......................wwwwwwwwwwwzzzzz00000...
+time  15: Swapped Out Process b
+.................11111111111111111444447777722222uuuuu......................wwwwwwwwwwwzzzzz00000...
+time  15: Swapped Out Process 4
+.................11111111111111111.....7777722222uuuuu......................wwwwwwwwwwwzzzzz00000...
+time 15: Swapped In Process 3 Size is 11 Duration is 1
+.................11111111111111111.....7777722222uuuuu33333333333...........wwwwwwwwwwwzzzzz00000...
+time 15: Swapped In Process 6 Size is 11 Duration is 2
+66666666666......11111111111111111.....7777722222uuuuu33333333333...........wwwwwwwwwwwzzzzz00000...
+time  16: Swapped Out Process u
+66666666666......11111111111111111.....7777722222.....33333333333...........wwwwwwwwwwwzzzzz00000...
+time  16: Swapped Out Process 3
+66666666666......11111111111111111.....7777722222...........................wwwwwwwwwwwzzzzz00000...
+time 16: Swapped In Process 8 Size is 17 Duration is 4
+66666666666......11111111111111111.....777772222288888888888888888..........wwwwwwwwwwwzzzzz00000...
+time  17: Swapped Out Process w
+66666666666......11111111111111111.....777772222288888888888888888.....................zzzzz00000...
+time  17: Swapped Out Process z
+66666666666......11111111111111111.....777772222288888888888888888..........................00000...
+time  17: Swapped Out Process 2
+66666666666......11111111111111111.....77777.....88888888888888888..........................00000...
+time  17: Swapped Out Process 7
+66666666666......11111111111111111...............88888888888888888..........................00000...
+time  17: Swapped Out Process 6
+.................11111111111111111...............88888888888888888..........................00000...
+time  18: Swapped Out Process 0
+.................11111111111111111...............88888888888888888..................................
+time  18: Swapped Out Process 1
+.................................................88888888888888888..................................
+time 18: Swapped In Process e Size is 31 Duration is 2
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee..................88888888888888888..................................
+time 18: Swapped In Process f Size is 31 Duration is 2
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee..................88888888888888888fffffffffffffffffffffffffffffff...
+time  20: Swapped Out Process 8
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee...................................fffffffffffffffffffffffffffffff...
+time  20: Swapped Out Process e
+..................................................................fffffffffffffffffffffffffffffff...
+time  20: Swapped Out Process f
+....................................................................................................
+time 20: Swapped In Process g Size is 31 Duration is 5
+ggggggggggggggggggggggggggggggg.....................................................................
+time 20: Swapped In Process k Size is 31 Duration is 4
+gggggggggggggggggggggggggggggggkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk......................................
+time 20: Swapped In Process l Size is 31 Duration is 1
+gggggggggggggggggggggggggggggggkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkklllllllllllllllllllllllllllllll.......
+time  21: Swapped Out Process l
+gggggggggggggggggggggggggggggggkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk......................................
+time 21: Swapped In Process o Size is 31 Duration is 5
+gggggggggggggggggggggggggggggggkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkooooooooooooooooooooooooooooooo.......
+time  24: Swapped Out Process k
+ggggggggggggggggggggggggggggggg...............................ooooooooooooooooooooooooooooooo.......
+time 24: Swapped In Process t Size is 31 Duration is 1
+gggggggggggggggggggggggggggggggtttttttttttttttttttttttttttttttooooooooooooooooooooooooooooooo.......
+time  25: Swapped Out Process g
+...............................tttttttttttttttttttttttttttttttooooooooooooooooooooooooooooooo.......
+time  25: Swapped Out Process t
+..............................................................ooooooooooooooooooooooooooooooo.......
+time 25: Swapped In Process v Size is 31 Duration is 2
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv...............................ooooooooooooooooooooooooooooooo.......
+time 25: Swapped In Process x Size is 31 Duration is 4
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxooooooooooooooooooooooooooooooo.......
+time  26: Swapped Out Process o
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx......................................
+time 26: Swapped In Process 5 Size is 31 Duration is 5
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx5555555555555555555555555555555.......
+time  27: Swapped Out Process v
+...............................xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx5555555555555555555555555555555.......
+time  29: Swapped Out Process x
+..............................................................5555555555555555555555555555555.......
+time  31: Swapped Out Process 5
+....................................................................................................

@@ -29,8 +29,7 @@ public class WorstFit {
 	
 	public void run() {
 		initialFill();
-		//MINUTES
-		for(int i = 1; i < 3; i++) {
+		for(int i = 1; i < MINUTES; i++) {
 			int j = 0, tempDuration = 0; 
 			while(j < currentProcess.size()) {
 				tempDuration = currentProcess.get(j).getDuration()-1;
@@ -38,7 +37,7 @@ public class WorstFit {
 				if(tempDuration == 0) {
 					Process p = currentProcess.remove(j);
 					swappedOut++;
-					freeSpace += p.getDuration();
+					freeSpace += p.getSize();
 					
 					String t = String.format("time  %2d: Swapped Out Process %s", i, p.getName());
 					System.out.println(t);
@@ -49,10 +48,28 @@ public class WorstFit {
 				}
 			}
 			
-			//Now Add New values in until freeSpace >= SMALLEST_SIZE && i < process.size();
-			//Follow very similar Logic as initialFill();
-			//Make sure to update swappedIn, currentProcess. 
-			//WORST POSSIBLE FIT LOGIC needs to be implemented in this part now. 
+			j = 0;
+			while(freeSpace >= SMALLEST_SIZE && j < process.size()) {
+				int[] biggestBlock = biggestEmptyBlock();
+				int count = biggestBlock[1];
+				if(process.get(j).getSize() <= biggestBlock[0]) {
+					Process p = process.remove(j);
+					int size = p.getSize();
+					char name = p.getName();
+					for(int k = 0; k < size; k++) {
+						mainMemory[count] = name;
+						count++;
+					}
+					currentProcess.add(p);
+					freeSpace -= size;
+					swappedIn++;
+					String t = String.format("time %2d: Swapped In Process %s Size is %2d Duration is %d", i, p.getName(), p.getSize(), p.getDuration());
+					System.out.println(t);
+					print();
+				} else {
+					j++;
+				}
+			}
 		} 
 	}
 	

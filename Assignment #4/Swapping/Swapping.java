@@ -34,9 +34,14 @@ public class Swapping {
 				nameCounter = 97;
 			}
 			
+			//If we run out of a-z start with 1-9. 
+			if(nameCounter == 123) {
+				nameCounter = 48;
+			}
 			readyQueue.add(p);
-			durationCounter += duration;
-		} while(durationCounter < 60);
+			durationCounter++;
+		} while(durationCounter <= 60); //This number will change after we talk to Dr. Mak. 
+										//I think we need to generate around 120-140 distinct processes. [JP]
 		
 		return readyQueue;
 	}
