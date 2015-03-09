@@ -1,0 +1,45 @@
+Process: Name: A Size:  5 Duration  5
+Process: Name: B Size: 11 Duration  4
+Process: Name: C Size: 17 Duration  1
+Process: Name: D Size: 11 Duration  5
+Process: Name: E Size: 11 Duration  3
+Process: Name: F Size:  5 Duration  5
+Process: Name: G Size:  5 Duration  4
+Process: Name: H Size: 17 Duration  2
+Process: Name: I Size:  5 Duration  1
+Process: Name: J Size: 31 Duration  2
+Process: Name: K Size: 11 Duration  3
+Process: Name: L Size:  5 Duration  4
+Process: Name: M Size: 31 Duration  2
+Process: Name: N Size: 31 Duration  5
+Process: Name: O Size: 17 Duration  2
+Process: Name: P Size: 31 Duration  4
+Process: Name: Q Size: 11 Duration  1
+Process: Name: R Size: 11 Duration  5
+Process: Name: S Size: 17 Duration  3
+time  0: Swapped In Process A Size is  5 Duration is 5
+AAAAA...............................................................................................
+time  0: Swapped In Process B Size is 11 Duration is 4
+AAAAABBBBBBBBBBB....................................................................................
+time  0: Swapped In Process C Size is 17 Duration is 1
+AAAAABBBBBBBBBBBCCCCCCCCCCCCCCCCC...................................................................
+time  0: Swapped In Process D Size is 11 Duration is 5
+AAAAABBBBBBBBBBBCCCCCCCCCCCCCCCCCDDDDDDDDDDD........................................................
+time  0: Swapped In Process E Size is 11 Duration is 3
+AAAAABBBBBBBBBBBCCCCCCCCCCCCCCCCCDDDDDDDDDDDEEEEEEEEEEE.............................................
+time  0: Swapped In Process F Size is  5 Duration is 5
+AAAAABBBBBBBBBBBCCCCCCCCCCCCCCCCCDDDDDDDDDDDEEEEEEEEEEEFFFFF........................................
+time  0: Swapped In Process G Size is  5 Duration is 4
+AAAAABBBBBBBBBBBCCCCCCCCCCCCCCCCCDDDDDDDDDDDEEEEEEEEEEEFFFFFGGGGG...................................
+time  0: Swapped In Process H Size is 17 Duration is 2
+AAAAABBBBBBBBBBBCCCCCCCCCCCCCCCCCDDDDDDDDDDDEEEEEEEEEEEFFFFFGGGGGHHHHHHHHHHHHHHHHH..................
+time  0: Swapped In Process I Size is  5 Duration is 1
+AAAAABBBBBBBBBBBCCCCCCCCCCCCCCCCCDDDDDDDDDDDEEEEEEEEEEEFFFFFGGGGGHHHHHHHHHHHHHHHHHIIIII.............
+time  0: Swapped In Process K Size is 11 Duration is 3
+AAAAABBBBBBBBBBBCCCCCCCCCCCCCCCCCDDDDDDDDDDDEEEEEEEEEEEFFFFFGGGGGHHHHHHHHHHHHHHHHHIIIIIKKKKKKKKKKK..
+time   1: Swapped Out Process C
+AAAAABBBBBBBBBBB.................DDDDDDDDDDDEEEEEEEEEEEFFFFFGGGGGHHHHHHHHHHHHHHHHHIIIIIKKKKKKKKKKK..
+time   1: Swapped Out Process I
+AAAAABBBBBBBBBBB.................DDDDDDDDDDDEEEEEEEEEEEFFFFFGGGGGHHHHHHHHHHHHHHHHH.....KKKKKKKKKKK..
+time   2: Swapped Out Process H
+AAAAABBBBBBBBBBB.................DDDDDDDDDDDEEEEEEEEEEEFFFFFGGGGG......................KKKKKKKKKKK..

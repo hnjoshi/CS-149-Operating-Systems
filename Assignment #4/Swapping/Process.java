@@ -23,7 +23,6 @@ public class Process {
 	}
 	
 	public String toString() {
-		return "Process: Name: " + name + " Size: " + size 
-                        + " Duration: " + duration;
+		return String.format("Process: Name: %c Size: %2d Duration %2d", name, size, duration);
 	}
 }

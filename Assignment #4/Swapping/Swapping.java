@@ -5,15 +5,18 @@ import java.util.Random;
 
 public class Swapping {
 	public static void main(String[] args) {
-		Queue<Process> process = generateProcess();
+		LinkedList<Process> process = generateProcess();
 		
 		for(Process p : process) {
 			System.out.println(p);
 		}
+		
+		WorstFit worstFit = new WorstFit(process);
+		worstFit.run();
 	}
 	
-	public static Queue<Process> generateProcess() {
-		Queue<Process> readyQueue = new LinkedList<Process>();
+	public static LinkedList<Process> generateProcess() {
+		LinkedList<Process> readyQueue = new LinkedList<Process>();
 		int durationCounter = 0;
 		int nameCounter = 65;
 		int[] sizes = {5, 11, 17, 31};
