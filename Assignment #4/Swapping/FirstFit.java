@@ -167,9 +167,9 @@ public class FirstFit {
 		}
 		emptyMemSize = null;
 		//System.out.println("Total empty Blocks = "+emptyBlocks);
-		System.out.println("Index: "+Arrays.toString(blockIndex));
+		/*System.out.println("Index: "+Arrays.toString(blockIndex));
 		System.out.println("Size : "+Arrays.toString(blockSize));
-		System.out.println("Next process size = "+x);
+		System.out.println("Next process size = "+x);*/
 		
 		for(int i=0; i<blockSize.length; i++){
 			if(x <= blockSize[i])
@@ -180,7 +180,7 @@ public class FirstFit {
 			}
 		}
 						
-		System.out.println("Result: "+Arrays.toString(result));
+		//System.out.println("Result: "+Arrays.toString(result));
 		
 		return result;
 	}

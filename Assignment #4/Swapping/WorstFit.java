@@ -13,6 +13,14 @@ public class WorstFit {
 	private char[] mainMemory;
 	private int freeSpace, swappedIn, swappedOut; 
 	
+	public int getSwappedIn() {
+		return swappedIn;
+	}
+
+	public int getSwappedOut() {
+		return swappedOut;
+	}
+
 	public WorstFit(LinkedList<Process> p) {
 		MINUTES = 60; SMALLEST_SIZE = 5; MAIN_MEMORY_SIZE = 100;
 		process = p;

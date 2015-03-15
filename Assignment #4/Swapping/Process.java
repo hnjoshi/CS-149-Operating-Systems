@@ -22,6 +22,15 @@ public class Process {
 		this.duration = duration;
 	}
 	
+	public Process clone() {
+		//Deep copy
+		Process p = new Process();
+		p.setName(name);
+		p.setSize(size);
+		p.setDuration(duration);
+		return p;
+	}
+	
 	public String toString() {
 		return String.format("Process: Name: %c Size: %2d Duration %2d", name, size, duration);
 	}
