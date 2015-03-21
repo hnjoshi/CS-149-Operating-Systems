@@ -8,6 +8,7 @@ public class NextFit {
 	private LinkedList<Process> process;
 	private ArrayList<Process> currentProcess;
 	private char[] mainMemory;
+	private char[] mariMemory;
 	private int freeSpace, swappedIn, swappedOut, indexStoppedAt=0;
 	boolean firstTime = true, foundInSecondHalf;
 
@@ -23,6 +24,7 @@ public class NextFit {
 		MINUTES = 60; SMALLEST_SIZE = 5; MAIN_MEMORY_SIZE = 100;
 		process = p;
 		mainMemory = new char[MAIN_MEMORY_SIZE];
+		mariMemory = new char[MAIN_MEMORY_SIZE];
 		currentProcess = new ArrayList<Process>();	
 		freeSpace = 100;
 	    swappedIn = 0;
@@ -30,12 +32,18 @@ public class NextFit {
 		
 		for(int i = 0; i < MAIN_MEMORY_SIZE; i++) {
 			mainMemory[i] = '.';
+			mariMemory[i] = '.';
 		}
 	}
 	
 	public void run() {
 		initialFill();
 		for(int i = 1; i < MINUTES; i++) {
+			
+			if(i==30){
+				compaction();
+			}
+			
 			int j = 0, tempDuration = 0; 
 			while(j < currentProcess.size()) {
 				tempDuration = currentProcess.get(j).getDuration()-1;
@@ -217,4 +225,27 @@ public class NextFit {
 		}
 		System.out.println(buffer.toString());
 	}
+	
+	public void compaction(){
+		
+		System.out.println("Compaction is about to Start");
+		
+		// actual compaction
+		int ctr = 0;
+		for(int i=0; i<MAIN_MEMORY_SIZE; i++){
+			if(mainMemory[i] != '.'){
+				mariMemory[ctr++] = mainMemory[i];
+			}
+		}
+		
+		mainMemory = mariMemory;
+		mariMemory = null;
+		
+		System.out.println("Compaction has completed");
+		System.out.println("Compacted memory print start");
+		print();
+		System.out.println("Compacted memory print end");
+		
+	}
+	
 }
