@@ -8,10 +8,10 @@ public class Paging {
 		pages = new ArrayList<Integer>();
 		initialize();
 		
-		//Run MFU Algorithm.
-		MFU mfu = new MFU(pages);
-		mfu.run();
-		System.out.printf("HIT RATIO: %.2f\n", (mfu.getHitRatio() * 100));
+		//Run LFU Algorithm.
+		LFU lfu = new LFU(pages);
+		lfu.run();
+		System.out.printf("HIT RATIO: %.2f\n", (lfu.getHitRatio() * 100));
 	}
 	
 	public static void initialize() 
