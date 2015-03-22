@@ -19,6 +19,7 @@ public class randomPick
 
    public randomPick(ArrayList<Integer> page) {
       pages = page;
+      hitRatio = 0;
       frames = new ArrayList<Integer>();
       for (int i = 0; i < 4; i++) {
          frames.add(i, -1);
@@ -27,8 +28,8 @@ public class randomPick
 
    public void run() {
       StringBuffer buffer = new StringBuffer();
-      int evictIndex = (int) (Math.random()*4);
       for (int i : pages) {
+         int evictIndex = (int)(Math.random() * 4) + 0 ;
          buffer.append(String.format("Referenced Page: %d", i));
          buffer.append(String.format("%5s", ""));
          String event = "";
@@ -43,11 +44,6 @@ public class randomPick
             }
             
             frames.set(evictIndex, i);
-            evictIndex++;
-            if(evictIndex>3)
-            {
-               evictIndex = 0;
-            }
          }
          String frameImage =  printFrame();
          buffer.append(String.format("%s", frameImage));
