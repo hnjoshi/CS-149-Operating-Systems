@@ -9,7 +9,7 @@ public class NextFit {
 	private ArrayList<Process> currentProcess;
 	private char[] mainMemory;
 	private char[] mariMemory;
-	private int freeSpace, swappedIn, swappedOut, indexStoppedAt=0;
+	private int freeSpace, swappedIn, swappedOut, memCopy, indexStoppedAt=0;
 	boolean firstTime = true, foundInSecondHalf;
 
 	public int getSwappedIn() {
@@ -18,6 +18,10 @@ public class NextFit {
 
 	public int getSwappedOut() {
 		return swappedOut;
+	}
+	
+	public int getMemCopy() {
+		return memCopy;
 	}
 
 	public NextFit(LinkedList<Process> p) {
@@ -38,12 +42,7 @@ public class NextFit {
 	
 	public void run() {
 		initialFill();
-		for(int i = 1; i < MINUTES; i++) {
-			
-			if(i==30){
-				compaction();
-			}
-			
+		for(int i = 1; i < MINUTES; i++) {			
 			int j = 0, tempDuration = 0; 
 			while(j < currentProcess.size()) {
 				tempDuration = currentProcess.get(j).getDuration()-1;
@@ -60,6 +59,10 @@ public class NextFit {
 				} else {
 					j++;
 				}
+			}
+			
+			if(i==30){
+				compaction();
 			}
 			
 			j = 0;
@@ -232,9 +235,26 @@ public class NextFit {
 		
 		// actual compaction
 		int ctr = 0;
+		int myCtr = 0, isFull = 0;
+		boolean isFirst = false;
+		
 		for(int i=0; i<MAIN_MEMORY_SIZE; i++){
 			if(mainMemory[i] != '.'){
 				mariMemory[ctr++] = mainMemory[i];
+				isFull++;
+			} else {
+				if(!isFirst) {
+					isFirst = true;
+					myCtr = i;
+				}
+			}
+		}
+		
+		if(isFull != MAIN_MEMORY_SIZE) {
+			for(int i = myCtr; i < MAIN_MEMORY_SIZE; i++) {
+				if(mainMemory[i] != '.') {
+					memCopy++;
+				}
 			}
 		}
 		
@@ -247,5 +267,4 @@ public class NextFit {
 		System.out.println("Compacted memory print end");
 		
 	}
-	
 }
