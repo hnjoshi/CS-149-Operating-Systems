@@ -7,7 +7,11 @@ public class Paging {
 	public static void main (String[] args) {
 		pages = new ArrayList<Integer>();
 		initialize();
-		printPages();
+		
+		//Run MFU Algorithm.
+		MFU mfu = new MFU(pages);
+		mfu.run();
+		System.out.printf("HIT RATIO: %.2f\n", (mfu.getHitRatio() * 100));
 	}
 	
 	public static void initialize() 
