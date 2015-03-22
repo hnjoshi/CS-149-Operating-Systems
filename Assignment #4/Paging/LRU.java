@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-import org.omg.CORBA.FREE_MEM;
-
 public class LRU {
 	
 	
